@@ -6,11 +6,31 @@ from pathlib import Path
 def process_markdown_file(input_file_path, output_file_path):
     with open(input_file_path, 'r', encoding='utf-8') as file:
         content = file.read()
+    content = break_lines_titles(content)
     content = convert_github_admonitions_to_pandoc_divs(content)
     with open(output_file_path, 'w', encoding='utf-8') as file:
         file.write(content)
 
 
+def break_lines_titles(content):
+    """
+    Quebra linhas longas em títulos para evitar quebras de página indesejadas.
+
+    Args:
+        content: Uma string contendo o texto Markdown.
+
+    Returns:
+        Uma string com as linhas longas quebradas.
+    """
+    lines = content.splitlines()
+    output_lines = []
+    for line in lines:
+        if line.startswith("#") or line.startswith("##") or line.startswith("###"):
+            # Adiciona uma quebra de linha após o título
+            output_lines.append('\n' + line + "\n")
+        else:
+            output_lines.append(line)
+    return "\n".join(output_lines)
 
 def convert_github_admonitions_to_pandoc_divs(markdown_text):
     """

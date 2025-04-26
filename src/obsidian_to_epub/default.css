@@ -11,6 +11,7 @@ li {
 }
 
 pre {
+    background-color: #f4f4f4;
     padding: 1em;
     border: 1px solid #ccc;
     overflow: auto;
@@ -20,6 +21,55 @@ pre {
     margin: 1em 0;
     padding: 1em;
     border-left: 4px solid #5a9bcf;
+    background-color: #f0f7fb;
     border-radius: 0.25em;
 }
 
+
+/* Different callout types */
+.callout-note {
+    border-left-color: #6ab0de;
+    background-color: #e7f2fa;
+}
+
+.callout-warning {
+    border-left-color: #f0ad4e;
+    background-color: #fcf8e3;
+}
+
+.callout-info{
+    border-left-color: #5a9bcf;
+    background-color: #f0f7fb;
+}
+.callout-tip{
+    border-left-color: #3cb371;
+    background-color: #e6f7ef;
+}
+.callout-profile{
+    border-left-color: #9370db;
+    background-color: #f3f0fa;
+}
+.callout-combat{
+    border-left-color: #dc3545;
+    background-color: #f8e9eb;
+}
+.callout-warning{
+    border-left-color: #f0ad4e;
+    background-color: #fcf8e3;
+}
+.callout-abstract{
+    border-left-color: #607d8b;
+    background-color: #eef1f3;
+}
+.callout-lore{
+    border-left-color: #8b4513;
+    background-color: #f5efe9;
+}
+.callout-item{
+    border-left-color: #ff9800;
+    background-color: #fff8e1;
+}
+.callout-design{
+    border-left-color: #2196f3;
+    background-color: #e3f2fd;
+}

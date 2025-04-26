@@ -24,7 +24,7 @@ def generate_epub(input_dir, output_file, css_file):
     
     # Get markdown files and sort them
     markdown_files = sorted(str(f) for f in input_path.glob('**/*.md'))
-    
+    logging.info(f"Markdown files found: {markdown_files}")
     if not markdown_files:
         logging.warning(f"No markdown files found in {input_path}")
         return False
