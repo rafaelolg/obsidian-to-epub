@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+pre {
+    padding: 1em;
+    border: 1px solid #ccc;
+    overflow: auto;
+}
+
+.callout {
+    margin: 1em 0;
+    padding: 1em;
+    border-left: 4px solid #5a9bcf;
+    border-radius: 0.25em;
+}
+

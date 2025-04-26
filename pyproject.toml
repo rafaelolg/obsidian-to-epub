@@ -17,6 +17,9 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = [
+    "ipython>=8.18.1",
+]
 
 [project.urls]
 Homepage = "https://rafaelolg.github.io/obsidian-to-epub/"
@@ -105,4 +108,7 @@ ignore = [
 [tool.ruff.format]
 preview = true
 
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/obsidian_to_epub"]
 
